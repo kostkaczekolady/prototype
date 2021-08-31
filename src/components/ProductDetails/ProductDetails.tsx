@@ -1,6 +1,13 @@
+import { useDispatch } from "react-redux";
+import { setChangeProductCount } from "../../redux/actions";
 import Styles from "./ProductDetails.module.scss";
 
 export const ProductDetails = () => {
+  
+  const dispatch = useDispatch();
+
+  const updateProductAmount = () => dispatch(setChangeProductCount())
+
   return (
     <div className={Styles.wrapper}>
       <h2>Paper</h2>
@@ -18,7 +25,7 @@ export const ProductDetails = () => {
           </div>
         </div>
         <div className={Styles.buy}>
-          <button>Buy</button>
+          <button onClick={()=>updateProductAmount}>Buy</button>
         </div>
       </div>
     </div>

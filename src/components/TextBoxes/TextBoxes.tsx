@@ -4,8 +4,6 @@ import Styles from "./TextBoxes.module.scss";
 export const TextBoxes = () => {
   return (
     <div className={Styles.wrapper}>
-      {/* <div className={Styles.container}>
-      </div> */}
       <div className={Styles.container}>
         <h3>Paper is awesome!</h3>
         <p>
