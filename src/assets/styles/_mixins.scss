@@ -1,0 +1,35 @@
+@import '../../assets/styles/palette';
+
+@mixin default-font {
+  font-family: $font-main;
+  font-size: 12px;
+  line-height: 30px;
+  letter-spacing: normal;
+  color: #000000;
+}
+
+@mixin device-mobile-and-tablet {
+  @media screen and (max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin device-desktop {
+  @media screen and (min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin reset-button {
+  appearance: none;
+  border: none;
+  padding: 0;
+  margin: 0;
+  box-shadow: none;
+  background-color: $color-transparent;
+
+  &:focus,
+  &:active {
+    outline: none;
+  }
+}

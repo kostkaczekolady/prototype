@@ -1,0 +1,23 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/palette";
+
+.wrapper {
+  flex-direction: column;
+
+  @include device-desktop {
+    flex-direction: row;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: row;
+}
+
+.sectionLeft, .sectionRight {
+  width: 50%;
+}
+
+.sectionLeft {
+  display: flex;
+}
