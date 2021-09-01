@@ -1,5 +1,4 @@
 @import "../../assets/styles/mixins";
-@import "../../assets/styles/palette";
 
 .wrapper {
   display: flex;
@@ -17,7 +16,7 @@
 .container {
   margin: 10px;
   padding: 10px;
-  border: 1px solid black;
+  border: 1px solid $color-black;
 
   @include device-desktop {
     width: 22%

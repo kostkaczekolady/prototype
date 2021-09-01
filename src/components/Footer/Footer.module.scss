@@ -1,8 +1,7 @@
 @import "../../assets/styles/mixins";
-@import "../../assets/styles/palette";
 
 .wrapper {
-  border: 1px solid black;
+  border: 1px solid $color-black;
   padding: 20px;
 
   display: flex;
@@ -61,4 +60,10 @@
     fill: $color-purple-300;
     padding-right: 10px;
   }
+}
+
+a:link {
+  color: $color-black;
+  padding: 5px;
+  text-decoration: none;
 }

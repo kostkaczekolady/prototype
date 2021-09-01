@@ -6,8 +6,12 @@
   max-width: 100%;
   align-items: center;
   justify-content: space-around;
-  border: 1px solid black;
+  border: 1px solid $color-black;
   margin: 0;
+
+  @include device-desktop {
+    border: none;
+  }
 }
 
 .hamburger {

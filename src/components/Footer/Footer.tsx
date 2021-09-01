@@ -12,25 +12,45 @@ export const Footer = () => {
           et viverra justo commodo. Proin sodales pulvinar tempor. Cum sociis
           natoque penatibus et magnis dis parturient montes, nascetur ridiculus
           mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
-          mollis orci, sed rhoncus sapien nunc eget odio.
-          mus. Nam fermentum, nulla luctus pharetra vulputate, felis tellus
-          mollis orci, sed rhoncus sapien nunc eget odio.
+          mollis orci, sed rhoncus sapien nunc eget odio. mus. Nam fermentum,
+          nulla luctus pharetra vulputate, felis tellus mollis orci, sed rhoncus
+          sapien nunc eget odio.
         </p>
       </div>
       <div className={Styles.container}>
         <div className={Styles.bestsellers}>
           <h4>Bestsellers</h4>
           <ul>
-            <li>A4</li>
-            <li>A5</li>
-            <li>Pens</li>
-            <li>Staplers</li>
-            <li>Notes</li>
-            <li>A4</li>
-            <li>A5</li>
-            <li>Pens</li>
-            <li>Staplers</li>
-            <li>Notes</li>
+            <li>
+              <a href="#">A4</a>
+            </li>
+            <li>
+              <a href="#">A5</a>
+            </li>
+            <li>
+              <a href="#">Pens</a>
+            </li>
+            <li>
+              <a href="#">Staplers</a>
+            </li>
+            <li>
+              <a href="#">Notes</a>
+            </li>
+            <li>
+              <a href="#">A4</a>
+            </li>
+            <li>
+              <a href="#">A5</a>
+            </li>
+            <li>
+              <a href="#">Pens</a>
+            </li>
+            <li>
+              <a href="#">Staplers</a>
+            </li>
+            <li>
+              <a href="#">Notes</a>
+            </li>
           </ul>
         </div>
         <div className={Styles.social}>

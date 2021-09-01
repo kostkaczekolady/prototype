@@ -1,0 +1,11 @@
+@import "../../assets/styles/mixins";
+@import "../../assets/styles/palette";
+
+.wrapper {
+  width: 100%;
+  border: 1px solid $color-black;
+  display: flex;
+  flex-direction: row;
+  padding: 10px 20px;
+}
+

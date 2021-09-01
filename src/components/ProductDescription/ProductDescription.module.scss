@@ -4,3 +4,23 @@
 .wrapper {
   padding: 20px;
 }
+
+.readMore {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+.test {
+  animation: fade-out-loading 1s linear forwards;
+}
+
+@keyframes fade-out-loading {
+  from {
+    opacity: 0;
+    visibility: hidden;
+  }
+  to {
+    opacity: 1;
+  }
+}
