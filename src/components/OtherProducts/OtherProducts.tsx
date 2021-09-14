@@ -1,20 +1,62 @@
 import Styles from "./OtherProducts.module.scss";
 
 export const OtherProducts = () => {
+  const links = [
+    {
+      href: "#",
+      label: "Post-it notes",
+    },
+    {
+      href: "#",
+      label: "Staplers",
+    },
+    {
+      href: "#",
+      label: "Hole punches",
+    },
+    {
+      href: "#",
+      label: "Binders",
+    },
+    {
+      href: "#",
+      label: "Paper",
+    },
+    {
+      href: "#",
+      label: "Printers",
+    },
+    {
+      href: "#",
+      label: "Post-it notes",
+    },
+    {
+      href: "#",
+      label: "Staplers",
+    },
+    {
+      href: "#",
+      label: "Hole punches",
+    },
+    {
+      href: "#",
+      label: "Binders",
+    },
+    {
+      href: "#",
+      label: "Paper",
+    },
+    {
+      href: "#",
+      label: "Printers",
+    },
+  ];
   return (
     <div className={Styles.wrapper}>
-      <a href="#">Post-it notes</a>
-      <a href="#">Staplers</a>
-      <a href="#">Hole punches</a>
-      <a href="#">Binders</a>
-      <a href="#">Paper</a>
-      <a href="#">Printers</a>
-      <a href="#">Post-it notes</a>
-      <a href="#">Staplers</a>
-      <a href="#">Hole punches</a>
-      <a href="#">Binders</a>
-      <a href="#">Paper</a>
-      <a href="#">Printers</a>
+      {links.map((element) => {
+        const { href, label } = element;
+        return <a href={href}>{label}</a>;
+      })}
     </div>
   );
 };

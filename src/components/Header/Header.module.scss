@@ -1,4 +1,5 @@
 @import "../../assets/styles/mixins";
+@import "../../assets//styles/palette";
 
 .wrapper {
   display: flex;
@@ -43,7 +44,8 @@
     width: 200px;
     align-items: center;
   }
-  input {
+  
+  & input {
     margin-right: 20px;
   }
 }
@@ -51,8 +53,9 @@
 .summary {
   display: flex;
   align-items: center;
+  position: relative;
 
-  button {
+  & button {
     display: none;
 
     @include device-desktop {
@@ -60,4 +63,18 @@
       margin-left: 20px;
     }
   }
+}
+
+.amount {
+  background-color: $color-purple-300;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2px;
+  position: absolute;
+  left: 20px;
+  bottom: 0;
 }

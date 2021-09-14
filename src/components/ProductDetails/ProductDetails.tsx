@@ -6,8 +6,8 @@ export const ProductDetails = () => {
   
   const dispatch = useDispatch();
 
-  const productAmount = useSelector((state: { productCount: number }) => state.productCount);
-  const updateProductAmount = () => dispatch(setChangeProductCount())
+  const productAmount = useSelector((state: { productCount: {value: number} }) => state.productCount.value);
+  const updateProductAmount = () => dispatch(setChangeProductCount(productAmount + 1))
 
 
   return (

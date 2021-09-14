@@ -5,7 +5,7 @@ import Styles from "./Header.module.scss";
 
 export const Header = () => {
 
-  const productAmount = useSelector((state: { productCount: number }) => state.productCount);
+  const productAmount = useSelector((state: { productCount: {value: number} }) => state.productCount.value);
 
   return (
     <div className={Styles.wrapper}>
@@ -21,7 +21,7 @@ export const Header = () => {
       </div>
       <div className={Styles.summary}>
         <Bag />
-        {productAmount > 0 ? <p>{productAmount} st</p> : null}
+        {productAmount > 0 ? <p className={Styles.amount}>{productAmount} st</p> : null}
         <button>Check out</button>
       </div>
     </div>

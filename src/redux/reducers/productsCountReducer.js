@@ -1,10 +1,11 @@
-import { handleAction } from "redux-actions";
 import {setChangeProductCount} from "../actions/updateProductCount";
+import { createReducer } from '@reduxjs/toolkit'
 
-const defaultState = 0;
+const initialState = { value: 0 } 
 
-export const productsCountReducer = handleAction(
-  setChangeProductCount,
-  (state, action) => action.payload,
-  defaultState,
-);
+export const productsCountReducer = createReducer(initialState, (builder) => {
+  builder
+    .addCase(setChangeProductCount, (state, action) => {
+      state.value = action.payload
+    })
+})

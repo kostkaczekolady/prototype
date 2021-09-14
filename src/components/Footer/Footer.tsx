@@ -2,6 +2,77 @@ import { Facebook, Logo, Twitter, LinkedIn } from "../../assets/icons/icons";
 import Styles from "./Footer.module.scss";
 
 export const Footer = () => {
+  const schoolSupplies = [
+    {
+      href: "#",
+      label: "A4",
+    },
+    {
+      href: "#",
+      label: "A5",
+    },
+    {
+      href: "#",
+      label: "Pens",
+    },
+    {
+      href: "#",
+      label: "Staplers",
+    },
+    {
+      href: "#",
+      label: "Notes",
+    },
+    {
+      href: "#",
+      label: "A4",
+    },
+    {
+      href: "#",
+      label: "A5",
+    },
+    {
+      href: "#",
+      label: "Pens",
+    },
+    {
+      href: "#",
+      label: "Staplers",
+    },
+    {
+      href: "#",
+      label: "Notes",
+    },
+  ];
+
+  const socialLinks = [
+    {
+      href: "#",
+      label: "Facebook",
+    },
+    {
+      href: "#",
+      label: "Twitter",
+    },
+    {
+      href: "#",
+      label: "Linkedin",
+    },
+  ];
+
+  const findLogo = (linkText: string) => {
+    switch (linkText) {
+      case "Facebook":
+        return <Facebook />;
+      case "Linkedin":
+        return <LinkedIn />;
+      case "Twitter":
+        return <Twitter />;
+      default:
+        return null;
+    }
+  };
+
   return (
     <div className={Styles.wrapper}>
       <div className={Styles.description}>
@@ -21,52 +92,27 @@ export const Footer = () => {
         <div className={Styles.bestsellers}>
           <h4>Bestsellers</h4>
           <ul>
-            <li>
-              <a href="#">A4</a>
-            </li>
-            <li>
-              <a href="#">A5</a>
-            </li>
-            <li>
-              <a href="#">Pens</a>
-            </li>
-            <li>
-              <a href="#">Staplers</a>
-            </li>
-            <li>
-              <a href="#">Notes</a>
-            </li>
-            <li>
-              <a href="#">A4</a>
-            </li>
-            <li>
-              <a href="#">A5</a>
-            </li>
-            <li>
-              <a href="#">Pens</a>
-            </li>
-            <li>
-              <a href="#">Staplers</a>
-            </li>
-            <li>
-              <a href="#">Notes</a>
-            </li>
+            {schoolSupplies.map((element) => {
+              const { href, label } = element;
+              return (
+                <li>
+                  <a href={href}>{label}</a>
+                </li>
+              );
+            })}
           </ul>
         </div>
         <div className={Styles.social}>
           <h4>We're social</h4>
-          <div className={Styles.icon}>
-            <Facebook />
-            <a href="#">Facebook</a>
-          </div>
-          <div className={Styles.icon}>
-            <Twitter />
-            <a href="#">Twitter</a>
-          </div>
-          <div className={Styles.icon}>
-            <LinkedIn />
-            <a href="#">Linkedin</a>
-          </div>
+          {socialLinks.map((element) => {
+            const { href, label } = element;
+            return (
+              <div className={Styles.icon}>
+                {findLogo(label)}
+                <a href={href}>{label}</a>
+              </div>
+            );
+          })}
         </div>
       </div>
     </div>

@@ -23,7 +23,7 @@ export const ProductDescription = () => {
         sed rhoncus sapien nunc eget odio.
       </p>
       {showMore && (
-        <div className={Styles.test}>
+        <div className={Styles.showMore}>
           <p>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean
             euismod bibendum laoreet. Proin gravida dolor sit amet lacus
